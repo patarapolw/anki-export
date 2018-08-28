@@ -1,0 +1,150 @@
+[[package]]
+category = "dev"
+description = "Read resources from Python packages"
+name = "importlib-resources"
+optional = false
+platform = "*"
+python-versions = ">=2.7,!=3.0,!=3.1,!=3.2,!=3.3"
+version = "1.0.1"
+
+[package.dependencies]
+setuptools = "*"
+wheel = "*"
+
+[package.dependencies.pathlib2]
+python = "<3"
+version = "*"
+
+[package.dependencies.typing]
+python = "<3.5"
+version = "*"
+
+[[package]]
+category = "dev"
+description = "Object-oriented filesystem paths"
+name = "pathlib2"
+optional = false
+platform = "*"
+python-versions = "*"
+version = "2.3.2"
+
+[package.dependencies]
+six = "*"
+
+[package.dependencies.scandir]
+python = "<3.5"
+version = "*"
+
+[package.requirements]
+python = "<3"
+
+[[package]]
+category = "dev"
+description = "Save pyexcel data with XlsxWriter, while retaining good formatting."
+name = "pyexcel-xlsxwx"
+optional = false
+platform = "*"
+python-versions = ">=3.5"
+version = "0.1.7"
+
+[package.dependencies]
+importlib_resources = ">=1.0,<2.0"
+"ruamel.yaml" = ">=0.15.50,<0.16.0"
+xlsxwriter = ">=1.0,<2.0"
+
+[[package]]
+category = "dev"
+description = "a version of dict that keeps keys in insertion resp. sorted order"
+name = "ruamel.ordereddict"
+optional = false
+platform = "*"
+python-versions = "*"
+version = "0.4.13"
+
+[package.requirements]
+python = "<=2.7"
+
+[[package]]
+category = "dev"
+description = "ruamel.yaml is a YAML parser/emitter that supports roundtrip preservation of comments, seq/map flow style, and map key order"
+name = "ruamel.yaml"
+optional = false
+platform = "*"
+python-versions = "*"
+version = "0.15.61"
+
+[package.dependencies]
+[package.dependencies."ruamel.ordereddict"]
+python = "<=2.7"
+version = "*"
+
+[[package]]
+category = "dev"
+description = "scandir, a better directory iterator and faster os.walk()"
+name = "scandir"
+optional = false
+platform = "*"
+python-versions = "*"
+version = "1.9.0"
+
+[package.requirements]
+python = "<3"
+
+[[package]]
+category = "dev"
+description = "Python 2 and 3 compatibility utilities"
+name = "six"
+optional = false
+platform = "*"
+python-versions = "*"
+version = "1.11.0"
+
+[package.requirements]
+python = "<3"
+
+[[package]]
+category = "dev"
+description = "Type Hints for Python"
+name = "typing"
+optional = false
+platform = "*"
+python-versions = "*"
+version = "3.6.6"
+
+[package.requirements]
+python = "<3.5"
+
+[[package]]
+category = "dev"
+description = "A built-package format for Python."
+name = "wheel"
+optional = false
+platform = "*"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.31.1"
+
+[[package]]
+category = "dev"
+description = "A Python module for creating Excel XLSX files."
+name = "xlsxwriter"
+optional = false
+platform = "*"
+python-versions = "*"
+version = "1.0.9"
+
+[metadata]
+content-hash = "91441e07f9b3f4616ea17022298aeb0a30a3c6b12771e5862c0b8bebdf08cb91"
+platform = "*"
+python-versions = "*"
+
+[metadata.hashes]
+importlib-resources = ["73f454e062ac149bafd262b18c1f9ebc91f53bd6474e028d1bf1c59ebd152efb"]
+pathlib2 = ["8eb170f8d0d61825e09a95b38be068299ddeda82f35e96c3301a8a5e7604cb83", "d1aa2a11ba7b8f7b21ab852b1fb5afb277e1bb99d5dfc663380b5015c0d80c5a"]
+pyexcel-xlsxwx = ["42ca4ddbcab02f0b4180956ac51c99fa34f2fb9cfbb94e80a2000885afcddb8a", "75fa1a88ebdc234c3d9c46b0a272b10bb9e7d799d6ef73e9ff869c6801e8ab0b"]
+"ruamel.ordereddict" = ["08b4b19fe518d32251a5338e039c4dc9eb0876f2919f94c9b8d2f9446ea80806", "150ce8e6c514a2a2b62753622a75874962561f8e5eeec81a3172ab952807bf0b", "45541836cbfdde630033cae7bbbe35acbac87a0ceec79f944b7a3bedd940fe78", "aee2fa23e884249b4284b728888c553d551e5bfd4de2731f10153fd7813ec55f", "bf0a198c8ce5d973c24e5dba12d3abc254996788ca6ad8448eabc6aa710db149"]
+"ruamel.yaml" = ["1d6e3b304a20a6c368a5c993fc8e99aa5a5567a4654110da5ee80e248499a2a9", "2d2b47a4396820b96b949e041e79558d0d29f019a3ac471c0103afb1132748e7", "4c82d946cd2d31308bff244426f6e85836d8ebde73315520f1a49e986e2291d5", "4ed2b6e78736487fabebdaba547ab4aa1ff80c077718c179f8429802d7922a48", "68b0e2746f2d67a48e8fb4b759f0d3986f721b6ae7a56612d1ca0c24b35fe62f", "7cd3b3ab020c1b19b809ea32fddd668fc4dde0c52e1e7f2dbd6cc8d5d5103d93", "87fc16ae28015605834745f0c5684d1b274e926ff93e2dc95bb253b4ea483866", "ad040e49d125d286f59db387e40eaa3ff377f8558dbe80399b6b9e48316ab352", "b0234ee649d7e36c0ddcf1b44fc1aea434ad546f9c11f1dc4aaaf7dc6c25a1e1", "b679527e3bac066c877af620108fa4ae7deb09d8d5b2d651be0de17a91208911", "b9c827c2bc4f1d1377e819abb793712f4f570e21d83ef9f08d3a55496d7a5585", "b9fb15289065b8bf89cb1059089c56bea285b08b15e4b12d2da5abf24c09c102", "baefdcc3bd63466596c77345205634b36d673b673fe708cf560f3dd63a777545", "bfdd62e5b7db48373cdc4d5695705e65bf3229a473d82d76021d2ea05c3e3acb", "d6b715b0c336942f3608c5fcc40a59a99ce4190bcd8695eb38dc41372c60d219", "d8e1a5f2aa55fa298fd80f5ff94e94c999f16df48df200e94f34e4ac61334cb0", "dd86fe274f8290b53efd62eb1c6bd791fcc9f35cad5894b4757f6fb9b535a3be", "ef0cab035cdf74583740b54ea2577765b880beda4440d41ac0409a2ef8cb9c55", "f14222177b615b1bf5279d35872bdcc0e27ebb4befaa8e56d510e67362fc08fb", "f82496e9c93ad5264dba0c2db8ebfc098cce7ee8da3d31f090a990a7408fd889"]
+scandir = ["04b8adb105f2ed313a7c2ef0f1cf7aff4871aa7a1883fa4d8c44b5551ab052d6", "1444134990356c81d12f30e4b311379acfbbcd03e0bab591de2696a3b126d58e", "1b5c314e39f596875e5a95dd81af03730b338c277c54a454226978d5ba95dbb6", "346619f72eb0ddc4cf355ceffd225fa52506c92a2ff05318cfabd02a144e7c4e", "44975e209c4827fc18a3486f257154d34ec6eaec0f90fef0cca1caa482db7064", "61859fd7e40b8c71e609c202db5b0c1dbec0d5c7f1449dec2245575bdc866792", "a5e232a0bf188362fa00123cc0bb842d363a292de7126126df5527b6a369586a", "c14701409f311e7a9b7ec8e337f0815baf7ac95776cc78b419a1e6d49889a383", "c7708f29d843fc2764310732e41f0ce27feadde453261859ec0fca7865dfc41b", "c9009c527929f6e25604aec39b0a43c3f831d2947d89d6caaab22f057b7055c8", "f5c71e29b4e2af7ccdc03a020c626ede51da471173b4a6ad1e904f2b2e04b4bd"]
+six = ["70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9", "832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"]
+typing = ["4027c5f6127a6267a435201981ba156de91ad0d1d98e9ddc2aa173453453492d", "57dcf675a99b74d64dacf6fba08fb17cf7e3d5fdff53d4a30ea2a5e7e52543d4", "a4c8473ce11a65999c8f59cb093e70686b6c84c98df58c1dae9b3b196089858a"]
+wheel = ["0a2e54558a0628f2145d2fc822137e322412115173e8a2ddbe1c9024338ae83c", "80044e51ec5bbf6c894ba0bc48d26a8c20a9ba629f4ca19ea26ecfcf87685f5f"]
+xlsxwriter = ["619f3e2653707b24aa4540c67a04ac68c1267e5d22e12a53e7fd2d4157313870", "98a94b32d4929d3e34595b4654b8e7f951182f540056b9cb734c88899912f729"]

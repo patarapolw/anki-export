@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "anki-export"
-version = "0.1.0"
+version = "0.1.1"
 description = "Export your Anki *.apkg to Python. Read Anki *.apkg in Python."
 authors = ["patarapolw <patarapolw@gmail.com>"]
 license = "MIT"

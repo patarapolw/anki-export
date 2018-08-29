@@ -32,6 +32,7 @@ class ApkgReader:
         return self.notes
 
     def close(self):
+        self.conn.close()
         shutil.rmtree(self.temp_dir)
 
     def init(self):
@@ -55,8 +56,8 @@ class ApkgReader:
         for note in self.conn.execute('SELECT * FROM notes'):
             yield self._format_note(note)
 
-    def _format_note(self, cursor):
-        note = OrderedDict(cursor)
+    def _format_note(self, row):
+        note = OrderedDict(row)
         header = self._model_to_header(self.find_model_by_id(note['mid']))
         note.update({
             'data': {
@@ -79,8 +80,8 @@ class ApkgReader:
         for card in self.conn.execute('SELECT * FROM cards'):
             yield self._format_card(card)
 
-    def _format_card(self, cursor):
-        card = OrderedDict(cursor)
+    def _format_card(self, row):
+        card = OrderedDict(row)
         card.update({
             'data': {
                 'note': self.find_note_by_id(card['nid']),

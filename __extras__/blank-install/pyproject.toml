@@ -6,7 +6,7 @@ authors = ["Pacharapol Withayasakpunt <polv@polv.cc>"]
 
 [tool.poetry.dependencies]
 python = "^3.7"
-anki-export = "^0.1.2"
+anki-export = "^0.1.4"
 pyexcel-xlsxwx = "^0.1.8"
 
 [tool.poetry.dev-dependencies]

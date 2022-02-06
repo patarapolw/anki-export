@@ -1,5 +1,5 @@
 import sqlite3
-from typing import Any, Union
+from typing import Any, Union, List
 from zipfile import ZipFile
 from tempfile import mkdtemp
 import shutil
@@ -159,14 +159,14 @@ class ApkgReader:
                 yield formatted_card
 
     def export(
-        self, has_header: bool = True, has_deck: bool = True, ords: list[int] = [0]
+        self, has_header: bool = True, has_deck: bool = True, ords: List[int] = [0]
     ):
         """Export for pyexcel_xlsxwx (OrderedDict of 2-D Lists)
 
         Args:
             has_header (bool, optional): Whether to add header on the first row. Defaults to True.
             has_deck (bool, optional): Whether to add deck names to the output Defaults to True.
-            ords (list[int], optional): positions in Note Type. Defaults to [0].
+            ords (List[int], optional): positions in Note Type. Defaults to [0].
 
         Returns:
             OrderedDict: a suitable format for pyexcel_xlsxwx

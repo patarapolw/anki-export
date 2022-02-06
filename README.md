@@ -1,6 +1,6 @@
 # anki-export
 
-![Github Actions](https://github.com/<patarapolw/anki-export/actions/workflows/test.yml/badge.svg)
+![Github Actions](https://github.com/patarapolw/anki-export/actions/workflows/test.yml/badge.svg)
 [![PyPI version shields.io](https://img.shields.io/pypi/v/anki-export.svg)](https://pypi.python.org/pypi/anki-export/)
 [![PyPI license](https://img.shields.io/pypi/l/anki-export.svg)](https://pypi.python.org/pypi/anki-export/)
 [![PyPI pyversions](https://img.shields.io/pypi/pyversions/anki-export.svg)](https://pypi.python.org/pypi/anki-export/)
@@ -17,7 +17,7 @@ with ApkgReader('test.apkg') as apkg:
     pyexcel_xlsxwx.save_data('test.xlsx', apkg.export(), config={'format': None})
 ```
 
-See real running example at [/__extras__/blank-install/to-xlsx.py](/__extras__/blank-install).
+See real running example at [`/__extras__/blank-install/to-xlsx.py`](/__extras__/blank-install).
 
 ## Installation
 

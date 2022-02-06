@@ -1,0 +1,24 @@
+{
+  "editor.tabSize": 2,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[vue]": {
+    "editor.semanticHighlighting.enabled": true,
+    "editor.defaultFormatter": "johnsoncodehk.volar",
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": true
+  },
+  "sort-imports.on-save": true,
+  "vetur.validation.template": false,
+  "vetur.validation.script": false,
+  "vetur.validation.style": false,
+}

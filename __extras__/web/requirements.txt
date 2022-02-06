@@ -1,0 +1,3 @@
+anki-export>=0.1.4
+pyexcel-xlsxwx>=0.1.8
+Flask>=2.0.2

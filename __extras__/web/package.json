@@ -1,0 +1,22 @@
+{
+  "name": "@anki-export/web",
+  "version": "0.1.0",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "import-sort-parser-typescript": "^6.0.0",
+    "typescript": "^4.4.4",
+    "vite": "^2.7.2"
+  },
+  "importSort": {
+    ".js, .ts": {
+      "parser": "typescript",
+      "style": "module"
+    }
+  }
+}

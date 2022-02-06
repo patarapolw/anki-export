@@ -1,0 +1,19 @@
+#app {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: 0.7em;
+    width: 100%;
+}
+
+form * {
+    font-size: 16px;
+}
+
+a[download] {
+    display: none;
+}

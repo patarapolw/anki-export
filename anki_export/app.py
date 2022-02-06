@@ -166,7 +166,7 @@ class ApkgReader:
         Args:
             has_header (bool, optional): Whether to add header on the first row. Defaults to True.
             has_deck (bool, optional): Whether to add deck names to the output Defaults to True.
-            ords (List[int], optional): positions in Note Type. Defaults to [0].
+            ords (List[int], optional): positions in Note Type. Choose only one item to avoid duplicates, unless different Note Types are in different decks. Defaults to [0].
 
         Returns:
             OrderedDict: a suitable format for pyexcel_xlsxwx

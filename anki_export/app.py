@@ -1,5 +1,5 @@
 import sqlite3
-from typing import Any
+from typing import Any, Union
 from zipfile import ZipFile
 from tempfile import mkdtemp
 import shutil
@@ -13,16 +13,16 @@ class ApkgReader:
 
     def __init__(
         self,
-        apkg_path: str | Path,
-        sqlite_path: str | Path = None,
-        extract_to: str | Path = None,
+        apkg_path: Union[str, Path],
+        sqlite_path: Union[str, Path] = None,
+        extract_to: Union[str, Path] = None,
     ):
         """Main class for reading *.apkg files.
 
         Args:
-            apkg_path (str | Path): Path to the *.apkg file.
-            sqlite_path (str | Path, optional): Path to the actual SQLite file. Defaults to None.
-            extract_to (str, optional): Path to the extraction folder. Defaults to `mkdtemp()`.
+            apkg_path (Union[str, Path]): Path to the *.apkg file.
+            sqlite_path (Union[str, Path], optional): Path to the actual SQLite file. Defaults to None.
+            extract_to (Union[str, Path], optional): Path to the extraction folder. Defaults to `mkdtemp()`.
         """
 
         self.tempdir = False
@@ -74,17 +74,17 @@ class ApkgReader:
         if self.tempdir:
             shutil.rmtree(self.extract_to)
 
-    def find_model_by_id(self, mid):
+    def find_model_by_id(self, mid: int):
         """Find model by ID"""
 
         return self.models.get(str(mid), None)
 
-    def find_deck_by_id(self, did):
+    def find_deck_by_id(self, did: int):
         """Find deck by ID"""
 
         return self.decks.get(str(did), None)
 
-    def find_note_by_id(self, nid):
+    def find_note_by_id(self, nid: int):
         """Find note by ID"""
 
         cursor = self.conn.execute("SELECT * FROM notes WHERE id=?", (nid,))
@@ -114,10 +114,10 @@ class ApkgReader:
     def _model_to_header(model):
         return [x["name"] for x in sorted(model["flds"], key=lambda x: x["ord"])]
 
-    def find_card_by_id(self, cid):
+    def find_card_by_id(self, cid: int):
         """Find card by ID"""
 
-        cursor = self.conn.execute("SELECT * FROM cards WHERE id=?", (cid,))
+        cursor = self.conn.execute("SELECT * FROM cards WHERE id=?", (int(cid),))
         return self._format_card(next(cursor))
 
     @property
@@ -144,7 +144,7 @@ class ApkgReader:
 
         return card
 
-    def cards_by_ord(self, ord=0):
+    def cards_by_ord(self, ord: int = 0):
         """Get card by ord (position in Note Type)
 
         Args:
@@ -158,7 +158,9 @@ class ApkgReader:
             if formatted_card["ord"] == ord:
                 yield formatted_card
 
-    def export(self, has_header=True, has_deck=True, ords: list[int] = [0]):
+    def export(
+        self, has_header: bool = True, has_deck: bool = True, ords: list[int] = [0]
+    ):
         """Export for pyexcel_xlsxwx (OrderedDict of 2-D Lists)
 
         Args:

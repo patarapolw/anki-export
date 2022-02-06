@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "anki-export"
-version = "0.1.1"
+version = "0.1.2"
 description = "Export your Anki *.apkg to Python. Read Anki *.apkg in Python."
 authors = ["patarapolw <patarapolw@gmail.com>"]
 license = "MIT"
@@ -8,7 +8,9 @@ readme = "README.md"
 keywords = ["anki"]
 
 [tool.poetry.dependencies]
-python = "*"
+python = ">=3.7"
 
 [tool.poetry.dev-dependencies]
-pyexcel-xlsxwx = "^0.1.7"
+pyexcel-xlsxwx = "^0.1.8"
+pytest = "^7.0.0"
+black = {version = "^22.1.0", allow-prereleases = true}
